@@ -4,8 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 
 
 
-const NavBar = () => {
 
+const NavBar = () => {
     return (
         <Navbar className="border" expand="lg" >
             <Container >
