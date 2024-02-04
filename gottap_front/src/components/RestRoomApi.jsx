@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import GoogleMapsComponent from './GoogleMapsApi';
+import '../App.css'
 
 function RestRoomApi() {
   const [bathrooms, setBathrooms] = useState([]);
@@ -62,7 +63,7 @@ useEffect(() => {
   return  (
      <div>
       {accessibleBathrooms.map(bathroom => (
-        <div key={bathroom.id} onClick={() => handleBathroomClick(bathroom)}>
+        <div className='bathroom-container' key={bathroom.id} onClick={() => handleBathroomClick(bathroom)}>
           <h2>Name: {bathroom.name}</h2>
           <h2>Unisex: {bathroom.unisex ? 'true' : 'false'}</h2>
           <h3>Address: {bathroom.street}, {bathroom.city}, {bathroom.state}</h3>
