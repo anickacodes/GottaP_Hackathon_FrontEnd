@@ -1,30 +1,33 @@
-
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import RestRoomApi from './components/RestRoomApi'
-import './App.css'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import NavBar from "./components/NavBar.jsx";
 import FooterBar from './components/FooterBar.jsx'
 import GoogleMapComponent from "./components/GoogleMapComponent";
+import LocationSearch from "./components/LocationSearch.jsx";
 
 function App() {
+  const [search, setSearch] = useState('')
+
+  const handleSearch = (newSearch) => {
+    setSearch(newSearch);
+  }
+
+  useEffect(handleSearch)
+
   return (
 <>
     <div>
-    <NavBar />
+      <NavBar />
+      <LocationSearch
+        onSearch={handleSearch}
+      />
+      {/* <GoogleMapComponent /> */}
+      <FooterBar />
     </div>
-
-<div>
-<h1> App </h1>
-<RestRoomApi />
-</div>
     </>
-  )
+  );
 }
-
 
 export default App;
