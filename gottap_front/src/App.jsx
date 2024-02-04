@@ -13,10 +13,16 @@ import GoogleMapComponent from "./components/GoogleMapComponent";
 
 function App() {
   return (
+<>
+    <div>
+    <NavBar />
+    </div>
+
 <div>
 <h1> App </h1>
 <RestRoomApi />
 </div>
+    </>
   )
 }
 
