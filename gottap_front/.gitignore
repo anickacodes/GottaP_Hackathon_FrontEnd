@@ -8,10 +8,15 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+
 dist
 dist-ssr
 *.local
+
+../.DS_Store
+
 .env
+
 
 
 # Editor directories and files
@@ -24,3 +29,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+
+.env 

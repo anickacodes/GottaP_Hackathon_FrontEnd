@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import NavBar from './components/NavBar'
+import "./App.css";
+import FooterBar from "./components/FooterBar";
+import NavBar from "./components/NavBar";
+import RestRoomApi from "./components/RestRoomApi";
 
 function App() {
-
   return (
-    <NavBar />
-  )
-}
+    <div>
+      <NavBar />
+      <RestRoomApi />
+      <FooterBar />
+    </div>
+)}
 
-export default App
+export default App;
