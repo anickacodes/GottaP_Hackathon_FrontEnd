@@ -6,17 +6,12 @@ import {
     InfoWindow
   } from "@react-google-maps/api";
 
-  const center = {
-    lat: 40.7128, 
-    lng: -74.0060
-  }
-  
   const containerStyle = {
     width: "800px",
     height: "600px",
   };
 
-  const GoogleMapsComponent = ({ bathrooms, selectedBathroom, setSelectedBathroom }) => {
+  const GoogleMapsComponent = ({ bathrooms, userLocation, selectedBathroom, setSelectedBathroom }) => {
     const API_KEY = import.meta.env.VITE_API_KEY;
     console.log(selectedBathroom)
 
@@ -28,8 +23,6 @@ import {
       const handleCloseInfoWindow = () => {
         setSelectedBathroom(null);
       };
-
-      
       bathrooms.map(bathroom => {
         console.log(bathrooms)
         console.log("Bathroom marker position:", {
@@ -38,13 +31,12 @@ import {
         })
     })
    ;
-
-
       return (
       <LoadScript googleMapsApiKey={API_KEY} loading="async">
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
+        <GoogleMap mapContainerStyle={containerStyle} center={userLocation} zoom={15}>
         {
             bathrooms.map(bathroom => (
+                
                 <Marker
                 key={bathroom.id}
                 position={{
@@ -65,16 +57,12 @@ import {
             onCloseClick={handleCloseInfoWindow}
           >
             <div>
-              <h2>{selectedBathroom.name}</h2>
-              {selectedBathroom.photo_reference && (
+              <h3>{selectedBathroom.name}</h3>
+              {selectedBathroom && (
                 <div>
-                  <p>Address: {selectedBathroom.vicinity}</p>
-                  <p> {selectedBathroom.plus_code.compound_code}</p>
-                  <p>Hours: {selectedBathroom.hours}</p>
-                  <img
-                    src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${selectedBathroom.photo_reference}&key=${API_KEY}`}
-                    alt={selectedBathroom.name}
-                  />
+          <h4>Unisex: {selectedBathroom.unisex ? 'True' : 'False'}</h4>
+          <h4>Address: {selectedBathroom.street}, {selectedBathroom.city}, {selectedBathroom.state}</h4>
+          <h4>Directions: {selectedBathroom.directions}, Distance: {selectedBathroom.distance.toFixed(2)} Miles</h4>
                 </div>
               )}
             </div>
@@ -86,7 +74,7 @@ import {
         )
   }
 
-  export default GoogleMapsComponent
+export default GoogleMapsComponent
 
   
 //   {selectedBathroom && (
