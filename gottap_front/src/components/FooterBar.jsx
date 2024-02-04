@@ -3,12 +3,13 @@
 
 import React from "react";
 import "./FooterBar.css";
-
+import About from "../pages/About.jsx";
+import { Link } from "react-router-dom";
 const FooterBar = () => {
   return (
     <div className="flex-container">
       <div className="about">
-        <a href="#">About</a>
+        <Link to="/About">About</Link>
       </div>
       <div className="copyright">Copyright 2024</div>
     </div>
