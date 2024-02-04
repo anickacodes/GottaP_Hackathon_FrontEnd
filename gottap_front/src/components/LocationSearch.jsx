@@ -10,7 +10,7 @@ const LocationSearch = ({ onSearch }) => {
         console.log(event.target)
         return;
 
-    };
+    };""
 
 
     return (
