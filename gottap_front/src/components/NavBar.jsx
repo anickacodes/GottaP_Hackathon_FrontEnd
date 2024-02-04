@@ -5,8 +5,8 @@ import logo from "../assets/output-onlinegiftools(4).gif"
 import NavbarBrand from "react-bootstrap/esm/NavbarBrand";
 
 
-const NavBar = () => {
 
+const NavBar = () => {
     return (
 
         <Navbar bg="dark" variant="dark"  >

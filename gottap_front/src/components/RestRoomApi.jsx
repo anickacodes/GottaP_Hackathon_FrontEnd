@@ -64,6 +64,10 @@ useEffect(() => {
       {accessibleBathrooms.map(bathroom => (
         <div key={bathroom.id} onClick={() => handleBathroomClick(bathroom)}>
           <h2>Name: {bathroom.name}</h2>
+          <h2>Unisex: {bathroom.unisex ? 'true' : 'false'}</h2>
+          <h3>Address: {bathroom.street}, {bathroom.city}, {bathroom.state}</h3>
+          <h3>Directions: {bathroom.directions}, Distance: {bathroom.distance.toFixed(2)} Miles</h3>
+          {/* <h3>Latitude: {bathroom.latitude}, Longitude: {bathroom.longitude} </h3> */}
         </div>
       ))}
        (

@@ -33,7 +33,7 @@ import {
    ;
       return (
       <LoadScript googleMapsApiKey={API_KEY} loading="async">
-        <GoogleMap mapContainerStyle={containerStyle} center={userLocation} zoom={15}>
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
         {
             bathrooms.map(bathroom => (
                 
