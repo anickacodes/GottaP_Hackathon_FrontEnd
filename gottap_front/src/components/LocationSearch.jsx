@@ -15,11 +15,6 @@ const LocationSearch = ({ onSearch }) => {
 
     return (
 
-
-
-
-
-
         <div className="search-bar">
             <form onSubmit={handleSubmit}>
                 <input className='searchBar'
