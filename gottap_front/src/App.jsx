@@ -10,7 +10,6 @@ function App() {
       <RestRoomApi />
       <FooterBar />
     </div>
-  );
-}
+)}
 
 export default App;
