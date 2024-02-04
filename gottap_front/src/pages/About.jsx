@@ -15,6 +15,14 @@ const About = () => {
               width="25%"
             ></img>
           </div>
+          <div>
+            <span>
+              <a href="http://linkedin.com/in/jessemchong">Linkedin</a>
+            </span>
+            <span>
+              <a href="">GitHub</a>
+            </span>
+          </div>
         </section>
 
         {/* Kenia's card section */}
@@ -27,6 +35,13 @@ const About = () => {
               width="25%"
             ></img>
           </div>
+
+          <span>
+            <a href="https://www.linkedin.com/in/kenia-decoteau/">LinkedIn</a>
+          </span>
+          <span>
+            <a href="https://github.com/KeniaD1">GitHub</a>
+          </span>
         </section>
 
         {/* Natyka's card section */}
@@ -39,6 +54,14 @@ const About = () => {
               width="25%"
             ></img>
           </div>
+          <div>
+            <span>
+              <a href="http://www.linkedin.com/in/natykajcallwood">LinkedIn</a>
+            </span>
+            <span>
+              <a href="https://github.com/NatykaC">GitHub</a>
+            </span>
+          </div>
         </section>
 
         {/* Nicki's card section */}
@@ -50,6 +73,14 @@ const About = () => {
               alt="Nicki's photo"
               width="25%"
             ></img>
+            <div>
+              <span>
+                <a href="https://www.linkedin.com/in/anickalewiss/">LinkedIn</a>
+              </span>
+              <span>
+                <a href="https://www.github.com/anickacodes">GitHub</a>
+              </span>
+            </div>
           </div>
         </section>
 
@@ -63,6 +94,12 @@ const About = () => {
               width="25%"
             ></img>
           </div>
+          <span>
+            <a href="http://www.linkedin.com/in/">LinkedIn</a>
+          </span>
+          <span>
+            <a href="https://github.com/yulondawyatt">GitHub</a>
+          </span>
         </section>
 
         {/* Yulonda's card section */}
@@ -74,6 +111,16 @@ const About = () => {
               alt="Yulonda's Pic"
               width="25%"
             ></img>
+          </div>
+          <div>
+            <span>
+              <a href="https://www.linkedin.com/in/tyrell-kamara-oliver/">
+                LinkedIn
+              </a>
+            </span>
+            <span>
+              <a href="">GitHub</a>
+            </span>
           </div>
         </section>
       </div>
