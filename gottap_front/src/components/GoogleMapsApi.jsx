@@ -4,8 +4,9 @@ import {
   LoadScript,
   InfoWindow,
 } from "@react-google-maps/api";
+import ReviewForm from "./ReviewForm";
 
-
+import '../App.css'
 
 const center = {
   lat: 40.7128,
@@ -43,7 +44,7 @@ const GoogleMapsComponent = ({
   });
   return (
     <LoadScript googleMapsApiKey={API_KEY} loading="async">
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
+      <GoogleMap className='map' mapContainerStyle={containerStyle} center={center} zoom={15}>
         {bathrooms.map((bathroom) => (
           <Marker
             key={bathroom.id}
@@ -78,8 +79,12 @@ const GoogleMapsComponent = ({
                   </h4>
                 </div>
               )}
+      <ReviewForm/>
+
             </div>
+
           </InfoWindow>
+          
         )}
       </GoogleMap>
     </LoadScript>

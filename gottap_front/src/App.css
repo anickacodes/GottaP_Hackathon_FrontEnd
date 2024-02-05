@@ -9,10 +9,13 @@
   grid-template-columns: repeat(2, 1fr);
 
 }
-
+.map  {
+  margin: 20px;
+}
 
 @media(min-width: 768px) and (max-width: 1024px) {
   div {
     display: flex;
+    flex-direction: column;
   }
 }
