@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from "../assets/output-onlinegiftools(4).gif"
 import NavbarBrand from "react-bootstrap/esm/NavbarBrand";
-
+import {Link} from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -12,10 +12,10 @@ const NavBar = () => {
         <Navbar bg="dark" variant="dark"  >
             <Container className="contain">
                 <NavbarBrand className="mx-auto" expand="lg" >
-                    <img src={logo}
+                   <Link to='/'><img src={logo}
                         alt="Logo"
                         className="img "
-                    />
+                    /></Link> 
                 </NavbarBrand>
             </Container>
         </Navbar>
