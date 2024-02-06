@@ -7,6 +7,7 @@ import {
 import ReviewForm from "./ReviewForm";
 
 import '../App.css'
+import { Link } from "react-router-dom";
 
 const center = {
   lat: 40.776676,
@@ -81,9 +82,10 @@ const GoogleMapsComponent = ({
                     Directions: {selectedBathroom.directions}, Distance:{" "}
                     {selectedBathroom.distance.toFixed(2)} Miles
                   </h4>
+                  <h3> <Link to='/reviews'>  Reviews:</Link> </h3>
                 </div>
               )}
-      <ReviewForm/>
+      {/* <ReviewForm/> */}
 
             </div>
 
