@@ -61,25 +61,24 @@ useEffect(() => {
   const accessibleBathrooms = bathrooms.filter(b => b.accessible === true);
 
   return  (
-     <div>
+     <div className='bathroom-container'>
       {accessibleBathrooms.map(bathroom => (
-        <div className='bathroom-container' key={bathroom.id} onClick={() => handleBathroomClick(bathroom)}>
-          <h2>Name: {bathroom.name}</h2>
-          <h2>Unisex: {bathroom.unisex ? 'true' : 'false'}</h2>
-          <h3>Address: {bathroom.street}, {bathroom.city}, {bathroom.state}</h3>
-          <h3>Directions: {bathroom.directions}, Distance: {bathroom.distance.toFixed(2)} Miles</h3>
-          {/* <h3>Latitude: {bathroom.latitude}, Longitude: {bathroom.longitude} </h3> */}
+        <div className='bathroom-list' key={bathroom.id} onClick={() => handleBathroomClick(bathroom)}>
+          <h2 id='label'>Name: <span>{bathroom.name}</span></h2>
+          <h2 id='label'>Unisex: <span>{bathroom.unisex ? 'true' : 'false'}</span></h2>
+          <h3 id='label'>Address: <span>{bathroom.street}, {bathroom.city}, {bathroom.state}</span></h3>
+          <h3 id='label'>Directions: <span>{bathroom.directions}, Distance: {bathroom.distance.toFixed(2)} Miles</span></h3>
+          {/* <h3 id='label'>Latitude: <span>{bathroom.latitude}, Longitude: {bathroom.longitude} </span></h3> */}
         </div>
       ))}
-       (
+       
         <GoogleMapsComponent
         bathrooms={bathrooms}
         selectedBathroom={selectedBathroom}
         setSelectedBathroom={setSelectedBathroom}
         userLocation={userLocation}
         />
-      )
-      {/* } */}
+      
     </div>
   );
 }
