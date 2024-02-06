@@ -9,13 +9,17 @@ import ReviewForm from "./ReviewForm";
 import '../App.css'
 
 const center = {
-  lat: 40.7128,
-  lng: -74.006,
+  lat: 40.776676,
+  lng: -73.971321,
 };
 
+
 const containerStyle = {
-  width: "800px",
-  height: "600px",
+  width: "60rem",
+  height: "52rem",
+  // display: 'flex',
+  margin: 'auto',
+  border: '16px groove grey'
 };
 
 const GoogleMapsComponent = ({
@@ -44,7 +48,7 @@ const GoogleMapsComponent = ({
   });
   return (
     <LoadScript googleMapsApiKey={API_KEY} loading="async">
-      <GoogleMap className='map' mapContainerStyle={containerStyle} center={center} zoom={15}>
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={15}>
         {bathrooms.map((bathroom) => (
           <Marker
             key={bathroom.id}

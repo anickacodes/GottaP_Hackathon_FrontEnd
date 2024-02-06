@@ -4,14 +4,27 @@
 }
 
 .bathroom-container {
-  border: 2px solid blue;
+display: grid;
+  gap: 2px;
+  padding: 22px;
+  margin: 30px;
+  justify-content: space-evenly;
+}
+
+.bathroom-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
 }
-.map  {
-  margin: 20px;
-}
+
+ #label {
+  font-style: oblique;
+font-size: 20px;
+ }
+
+ span {
+font-style: normal;
+ }
 
 @media(min-width: 768px) and (max-width: 1024px) {
   div {
